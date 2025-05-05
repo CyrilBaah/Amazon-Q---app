@@ -1,0 +1,204 @@
+/* Global Styles */
+:root {
+    --primary-color: #232f3e;
+    --secondary-color: #ff9900;
+    --accent-color: #0073bb;
+    --light-bg: #f8f8f8;
+    --dark-text: #333;
+    --light-text: #fff;
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    color: var(--dark-text);
+    background-color: var(--light-bg);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 0;
+    flex-wrap: wrap;
+}
+
+.hero-content {
+    flex: 1;
+    min-width: 300px;
+    padding-right: 2rem;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.hero-image {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.q-logo {
+    width: 200px;
+    height: 200px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+/* Benefits Section */
+.benefits {
+    padding: 4rem 0;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+    margin: 2rem 0;
+}
+
+.benefits h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--primary-color);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.benefit-card {
+    background-color: var(--light-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+.icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.benefit-card h3 {
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+}
+
+/* Use Cases Section */
+.use-cases {
+    padding: 4rem 0;
+}
+
+.use-cases h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+.use-case-list {
+    list-style-type: none;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.use-case-list li {
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+    background-color: white;
+    border-left: 4px solid var(--secondary-color);
+    border-radius: 0 4px 4px 0;
+    box-shadow: var(--card-shadow);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+    }
+    
+    .hero-content {
+        padding-right: 0;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+}
